@@ -11,10 +11,10 @@ Any comments and suggestions are welcome.
 If you use this code in your work, please cite the following paper:
 
 Z. Lyu,  L. M. Lui, and G. P. T. Choi,
-"[Ellipsoidal Density-Equalizing Map for Genus-0 Closed Surfaces.](https://arxiv.org/abs/2410.12331)"
-Preprint, arXiv:2410.12331, 2024.
+"[Ellipsoidal Density-Equalizing Map for Genus-0 Closed Surfaces.](https://doi.org/10.1007/s10444-026-10304-9)"
+Advances in Computational Mathematics, 52, 30, 2026.
 
-Copyright (c) 2024, Zhiyuan Lyu, Lok Ming Lui, Gary P. T. Choi
+Copyright (c) 2024-2026, Zhiyuan Lyu, Lok Ming Lui, Gary P. T. Choi
 
 https://github.com/garyptchoi/ellipsoidal-density-equalizing-map
 
