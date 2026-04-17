@@ -4,9 +4,9 @@ function r_new = update_and_correct_overlap_ellipsoid_2(f,S,r,bigtri,a1,b1,c1,a,
 % If you use this code in your work, please cite the following paper:
 %    Z. Lyu, L. M. Lui, and G. P. T. Choi,
 %    "Ellipsoidal Density-Equalizing Map for Genus-0 Closed Surfaces."
-%    Preprint, arXiv:2410.12331, 2024.
+%    Advances in Computational Mathematics, 52, 30, 2026. 
 %
-% Copyright (c) 2024, Zhiyuan Lyu, Lok Ming Lui, Gary P. T. Choi
+% Copyright (c) 2024-2026, Zhiyuan Lyu, Lok Ming Lui, Gary P. T. Choi
 %
 % https://github.com/garyptchoi/ellipsoidal-density-equalizing-map
 
@@ -123,11 +123,18 @@ while flag
         % done, no need to continue
         flag = 0;
     end
+
+    if dt < 1e-10
+        flag = 0;
+    end
 end
 
-% rotate the sphere to the original position after correction
-r_new = (RS_inv*r_newS')';
-r_new = [r_new(:,1)*a, r_new(:,2)*b, r_new(:,3)*c];
-
+if dt < 1e-10
+    r_new = r_ori;
+else
+    % rotate the sphere to the original position after correction
+    r_new = (RS_inv*r_newS')';
+    r_new = [r_new(:,1)*a, r_new(:,2)*b, r_new(:,3)*c];
+end
 
 
